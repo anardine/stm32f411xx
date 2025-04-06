@@ -55,6 +55,4 @@
 #define USBOTG_BASEADDR				(AHB2PERIPH_BASE + 0x0000)
 
 
-
-
 #endif /* INC_STM32F411XX_H_ */
