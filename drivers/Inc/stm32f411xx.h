@@ -87,7 +87,7 @@ typedef struct {
 
 }USARTx_MapR_t;
 
-
+// struct definition for SPIx
 typedef struct {
 	uint32_t SPI_CR1;
 	uint32_t SPI_SR;
@@ -99,6 +99,20 @@ typedef struct {
 	uint32_t SPI_I2S_PR;
 
 }SPIx_MapR_t;
+
+// struct definition for I2Cx
+typedef struct {
+	uint32_t I2C_CR1;
+	uint32_t I2C_CR2;
+	uint32_t I2C_OAR1;
+	uint32_t I2C_OAR2;
+	uint32_t I2C_DR;
+	uint32_t I2C_SR1;
+	uint32_t I2C_SR2;
+	uint32_t I2C_CCR;
+	uint32_t I2C_TRISE;
+	uint32_t I2C_FRTR;
+}I2Cx_MapR_t;
 
 
 
