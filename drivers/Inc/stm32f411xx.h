@@ -8,6 +8,8 @@
 #ifndef INC_STM32F411XX_H_
 #define INC_STM32F411XX_H_
 
+#include <stdint.h>
+
 // keep all the base addresses of the microcontroller
 
 #define FASH_BASEADDR				0x08000000U
@@ -19,7 +21,7 @@
 #define OTP_BASEADDR				0x1FFF7800U
 
 // base addresses of each bus domains
-#define PERIPH_BASE					0x40000000U
+#define PERIPH_BASEADDR				0x40000000U
 #define APB1PERIPH_BASE				0x40000000U
 #define APB2PERIPH_BASE				0x40010000U
 #define AHB1PERIPH_BASE				0x40020000U
@@ -56,3 +58,47 @@
 
 
 #endif /* INC_STM32F411XX_H_ */
+
+//struct definition for GPIOx
+typedef struct {
+	uint32_t MODER; 		//mode select typer register
+	uint32_t OTYPER;		//output type register
+	uint32_t OSPEEDR;		//output speed register
+	uint32_t PUPDR;			//pull-up or pull-down register
+	uint32_t IDR; 			//input data register
+	uint32_t ODR;			//output data register
+	uint32_t BSSR;			//bit set/reset register
+	uint32_t LCKR;			//port config lock register
+	uint32_t AFRL; 			//alternate function low register
+	uint32_t AFRH;			//alternate function high register
+
+}GPIOx_MapR_t;
+
+
+// struct definition for USARTx
+typedef struct {
+	uint32_t USART_SR;
+	uint32_t USART_DR;
+	uint32_t USART_BRR;
+	uint32_t USART_CR1;
+	uint32_t USART_CR2;
+	uint32_t USART_CR3;
+	uint32_t USART_GTPR;
+
+}USARTx_MapR_t;
+
+
+typedef struct {
+	uint32_t SPI_CR1;
+	uint32_t SPI_SR;
+	uint32_t SPI_DR;
+	uint32_t SPI_CRCPR;
+	uint32_t SPI_RXCRCR;
+	uint32_t SPI_TXCRCR;
+	uint32_t SPI_I2S_CFGR;
+	uint32_t SPI_I2S_PR;
+
+}SPIx_MapR_t;
+
+
+

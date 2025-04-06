@@ -796,10 +796,10 @@ LOAD /opt/st/stm32cubeide_1.18.0/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_line    0x00000000      0x3a4 ./Src/main.o
  .debug_line    0x000003a4       0x7b ./Startup/startup_stm32f411retx.o
 
-.debug_str      0x00000000     0x40fd
- .debug_str     0x00000000     0x40fd ./Src/main.o
-                               0x4231 (size before relaxing)
- .debug_str     0x000040fd       0x86 ./Startup/startup_stm32f411retx.o
+.debug_str      0x00000000     0x4119
+ .debug_str     0x00000000     0x4119 ./Src/main.o
+                               0x4235 (size before relaxing)
+ .debug_str     0x00004119       0x86 ./Startup/startup_stm32f411retx.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./Src/main.o
