@@ -88,6 +88,7 @@ typedef struct {
 
 
 
+
 // Struct def for all common used peripherals.
 
 //struct definition for GPIOx
