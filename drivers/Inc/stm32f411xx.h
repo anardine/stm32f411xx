@@ -27,6 +27,9 @@
 #define AHB1PERIPH_BASE				0x40020000U
 #define AHB2PERIPH_BASE				0x50000000U
 
+// base address for RTC Clock
+#define RTC_BASEADDR				(APB1PERIPH_BASE + 0x2800)
+
 // base addresses of GPIOx on AHB1 peripheral
 #define RCC_BASEADDR				(AHB1PERIPH_BASE + 0x3800)
 #define GPIOA_BASEADDR				(AHB1PERIPH_BASE + 0x0000)
@@ -59,7 +62,7 @@
 
 #endif /* INC_STM32F411XX_H_ */
 
-// Struct definition for RCC clock for all peripheral buses
+// Struct definition for RTC clock for all peripheral buses
 
 typedef struct {
 	volatile uint32_t RTC_TR;
@@ -84,10 +87,7 @@ typedef struct {
 	volatile uint32_t RTC_BKP0R;
 	volatile uint32_t RTC_BKP19R;
 
-}RCC_MapR_t;
-
-
-
+}RTC_MapR_t;
 
 // Struct def for all common used peripherals.
 
