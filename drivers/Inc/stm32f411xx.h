@@ -87,6 +87,7 @@ typedef struct {
 }RCC_MapR_t;
 
 
+
 // Struct def for all common used peripherals.
 
 //struct definition for GPIOx
