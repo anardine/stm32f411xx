@@ -59,59 +59,89 @@
 
 #endif /* INC_STM32F411XX_H_ */
 
+// Struct definition for RCC clock for all peripheral buses
+
+typedef struct {
+	volatile uint32_t RTC_TR;
+	volatile uint32_t RTC_DR;
+	volatile uint32_t RTC_CR;
+	volatile uint32_t RTC_ISR;
+	volatile uint32_t RTC_PRER;
+	volatile uint32_t RTC_WUTR;
+	volatile uint32_t RTC_CALIBR;
+	volatile uint32_t RTC_ALRMAR;
+	volatile uint32_t RTC_ALRMBR;
+	volatile uint32_t RTC_WPR;
+	volatile uint32_t RTC_SSR;
+	volatile uint32_t RTC_SHIFTR;
+	volatile uint32_t RTC_TSTR;
+	volatile uint32_t RTC_TSDR;
+	volatile uint32_t RTC_TSSSR;
+	volatile uint32_t RTC_CARLR;
+	volatile uint32_t RTC_TAFCR;
+	volatile uint32_t RTC_ALRMASSR;
+	volatile uint32_t RTC_ALRMBSSR;
+	volatile uint32_t RTC_BKP0R;
+	volatile uint32_t RTC_BKP19R;
+
+}RCC_MapR_t;
+
+
+// Struct def for all common used peripherals.
+
 //struct definition for GPIOx
 typedef struct {
-	uint32_t MODER; 		//mode select typer register
-	uint32_t OTYPER;		//output type register
-	uint32_t OSPEEDR;		//output speed register
-	uint32_t PUPDR;			//pull-up or pull-down register
-	uint32_t IDR; 			//input data register
-	uint32_t ODR;			//output data register
-	uint32_t BSSR;			//bit set/reset register
-	uint32_t LCKR;			//port config lock register
-	uint32_t AFRL; 			//alternate function low register
-	uint32_t AFRH;			//alternate function high register
+	volatile uint32_t MODER; 		//mode select typer register
+	volatile uint32_t OTYPER;		//output type register
+	volatile uint32_t OSPEEDR;		//output speed register
+	volatile uint32_t PUPDR;			//pull-up or pull-down register
+	volatile uint32_t IDR; 			//input data register
+	volatile uint32_t ODR;			//output data register
+	volatile uint32_t BSSR;			//bit set/reset register
+	volatile uint32_t LCKR;			//port config lock register
+	volatile uint32_t AFRL; 			//alternate function low register
+	volatile uint32_t AFRH;			//alternate function high register
 
 }GPIOx_MapR_t;
 
 
 // struct definition for USARTx
 typedef struct {
-	uint32_t USART_SR;
-	uint32_t USART_DR;
-	uint32_t USART_BRR;
-	uint32_t USART_CR1;
-	uint32_t USART_CR2;
-	uint32_t USART_CR3;
-	uint32_t USART_GTPR;
+	volatile uint32_t USART_SR;
+	volatile uint32_t USART_DR;
+	volatile uint32_t USART_BRR;
+	volatile uint32_t USART_CR1;
+	volatile uint32_t USART_CR2;
+	volatile uint32_t USART_CR3;
+	volatile uint32_t USART_GTPR;
 
 }USARTx_MapR_t;
 
 // struct definition for SPIx
 typedef struct {
-	uint32_t SPI_CR1;
-	uint32_t SPI_SR;
-	uint32_t SPI_DR;
-	uint32_t SPI_CRCPR;
-	uint32_t SPI_RXCRCR;
-	uint32_t SPI_TXCRCR;
-	uint32_t SPI_I2S_CFGR;
-	uint32_t SPI_I2S_PR;
+	volatile uint32_t SPI_CR1;
+	volatile uint32_t SPI_SR;
+	volatile uint32_t SPI_DR;
+	volatile uint32_t SPI_CRCPR;
+	volatile uint32_t SPI_RXCRCR;
+	volatile uint32_t SPI_TXCRCR;
+	volatile uint32_t SPI_I2S_CFGR;
+	volatile uint32_t SPI_I2S_PR;
 
 }SPIx_MapR_t;
 
 // struct definition for I2Cx
 typedef struct {
-	uint32_t I2C_CR1;
-	uint32_t I2C_CR2;
-	uint32_t I2C_OAR1;
-	uint32_t I2C_OAR2;
-	uint32_t I2C_DR;
-	uint32_t I2C_SR1;
-	uint32_t I2C_SR2;
-	uint32_t I2C_CCR;
-	uint32_t I2C_TRISE;
-	uint32_t I2C_FRTR;
+	volatile uint32_t I2C_CR1;
+	volatile uint32_t I2C_CR2;
+	volatile uint32_t I2C_OAR1;
+	volatile uint32_t I2C_OAR2;
+	volatile uint32_t I2C_DR;
+	volatile uint32_t I2C_SR1;
+	volatile uint32_t I2C_SR2;
+	volatile uint32_t I2C_CCR;
+	volatile uint32_t I2C_TRISE;
+	volatile uint32_t I2C_FRTR;
 }I2Cx_MapR_t;
 
 
